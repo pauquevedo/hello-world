@@ -22,7 +22,13 @@ Origen: carpeta **"Brand 01"** de Google Drive.
 | `effects_vfx.png` | Explosión, destello de estrella, nube de humo / fuego, impacto, confeti / remolino mágico, salpicadura, rayo | 2048×2048 | Gemini_Generated_Image_khdv3pkhdv3pkhdv.png |
 | `ui_buttons.png` | Botones vacíos naranja, verde azulado, morado / play, pausa, ajustes / inicio, sonido, marco de panel | 2048×2048 | Gemini_Generated_Image_9cvy6f9cvy6f9cvy.png |
 
-## Pendiente
+## Sprites recortados
 
-- Recortar cada hoja en sprites individuales.
-- Quitar el fondo blanco (transparencia) para poder usarlos en el juego.
+Los sprites individuales, ya con fondo transparente, están en
+`DragonRunner/Assets/Resources/Sprites/<hoja>/<nombre>.png`. Se regeneran con:
+
+```bash
+python3 tools/slice_sprites.py assets/sprites DragonRunner/Assets/Resources/Sprites
+```
+
+(requiere `numpy`, `scipy` y `Pillow`).
